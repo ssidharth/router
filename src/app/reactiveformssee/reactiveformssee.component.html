@@ -1,0 +1,22 @@
+
+  <form [formGroup]="form">
+<div class="form-group">
+  <label>username</label>
+  <input type="text" formControlName="username"  class="form-control">
+</div>
+<div *ngIf="!username.valid && username.touched">
+  <div class="alert alert-danger" *ngIf="username.errors.required">username required</div>"
+
+    <div class="alert alert-danger" *ngIf="username.errors.minlength">min 10 required {{userame.error.minlength.requiredLength}}</div>"
+    <div class="alert alert-danger" *ngIf="username.errors.pattern">pattern mismatched</div>"
+
+  </div>
+
+<div class="form-group">
+  <label>password</label>
+  <input type="password" placeholder="your password" class="form-control">
+</div>
+
+
+<button type="submit" class="btn btn-primary">submit</button>
+</form>
