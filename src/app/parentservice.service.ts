@@ -18,6 +18,17 @@ place:"chennai"
 }
   ]
 }
+skills(){
+  return[{
+    play2:"basketball", 
+    play1:"Cricket"
+  },
+  {
+    playA:"basket", 
+    playB:"Crick"
+  }
+  ]
+}
   
   constructor() { }
 

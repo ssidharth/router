@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {ParentserviceService} from '../parentservice.service';
 @Component({
   selector: 'app-parent',
@@ -8,7 +8,7 @@ import {ParentserviceService} from '../parentservice.service';
 })
 export class ParentComponent implements OnInit {
 employees;
-
+@Input() bycycle;
 name="Sidharth";
 
   constructor(private employeeservice: ParentserviceService) { }
