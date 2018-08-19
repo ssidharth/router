@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BindingComponent } from './binding/binding.component';
 import { InbuilddirectiveComponent } from './inbuilddirective/inbuilddirective.component';
@@ -12,13 +11,15 @@ import { Http2servicesService } from './http2/http2services.service';
 import { NgifComponent } from './ngif/ngif.component';
 //import { CalciComponent } from './calci/calci.component';
 import {Routes, RouterModule} from '@angular/router';
-import { ToDoListComponent } from './to-do-list/to-do-list.component';
+//import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { PostComponent } from './post/post.component';
+import { ParentComponent } from './parent/parent.component';
+import { FormadressComponent } from './formadress/formadress.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
-const routes = [{path:'post',Component: PostComponent},{path:'to-do-list',
-Component : ToDoListComponent} ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,16 +29,22 @@ Component : ToDoListComponent} ];
     PostComponent,
     Http2Component,
     NgifComponent,
-    ToDoListComponent,
+    //ToDoListComponent,
+    ParentComponent,
+    FormadressComponent,
     //CalciComponent,
   ],
     
   
   imports: [
     BrowserModule,
-    FormsModule,ReactiveFormsModule,HttpModule,RouterModule.forRoot(routes)
+    ReactiveFormsModule,HttpModule,//RouterModule.forRoot(routes)
+    FormsModule
   ],
   providers: [Http2servicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// const routes = [{path:'post',Component: PostComponent},{path:'to-do-list',
+//Component : ToDoListComponent} ];
